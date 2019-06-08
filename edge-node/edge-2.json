@@ -1,0 +1,10 @@
+{
+  "kind": "Node",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "edge-2",
+    "labels": {
+      "name": "edge-node-2"
+    }
+  }
+}
