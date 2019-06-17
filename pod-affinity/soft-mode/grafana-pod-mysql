@@ -1,20 +1,19 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: grafana-node-12.04
+  name: grafana-pod-mysql
   labels:
     app: grafana
 spec:
   affinity:
-    nodeAffinity:
-      preferredDuringSchedulingIgnoredDuringExecution:
-      - weight: 1
-        preference:
+    podAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
           matchExpressions:
-          - key: os.version
+          - key: app
             operator: In
             values:
-            - "12.04"
+            - mysql
   containers:
   - name: grafana
     image: grafana/grafana
