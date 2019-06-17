@@ -14,7 +14,7 @@ spec:
             operator: In
             values:
             - mongodb
-        tpologyKey: kubernetes.io/hostname  
+        topologyKey: kubernetes.io/hostname  
   containers:
   - name: grafana
     image: grafana/grafana
