@@ -5,7 +5,7 @@ metadata:
   labels:
     app: grafana
 spec:
-  replicas: 1
+  replicas: 10
   selector:
     matchLabels:
       app: grafana
@@ -19,4 +19,3 @@ spec:
         image: grafana/grafana
         ports:
         - containerPort: 3000
-          hostPort: 3000
