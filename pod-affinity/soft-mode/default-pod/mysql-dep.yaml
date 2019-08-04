@@ -1,9 +1,11 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
-  name: mysql-replicaset
+  name: mysql-deployment
+  labels:
+    app: mysql
 spec:
-  replicas: 10
+  replicas: 3
   selector:
     matchLabels:
       app: mysql
@@ -16,5 +18,5 @@ spec:
       - name: mysql
         image: mysql:latest
         env:
-         - name: MYSQL_ROOT_PASSWORD
-           value: password    
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
