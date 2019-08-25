@@ -9,5 +9,4 @@ spec:
   - name: nginx
     image: nginx:latest
   nodeSelector:
-    nodetype: edge
-    name: edge-node-1
+    network: 1000m

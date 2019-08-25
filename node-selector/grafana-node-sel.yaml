@@ -9,4 +9,4 @@ spec:
   - name: grafana
     image: grafana/grafana
   nodeSelector:
-    nodetype: edge
+    network: 100m
