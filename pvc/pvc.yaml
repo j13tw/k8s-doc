@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: persistentVolumeClaim
+metadata: 
+  name: pv-claim
+  labels:
+    app: nginx-pod
+  namespace: default
+spec:
+  accessModes:
+   - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
